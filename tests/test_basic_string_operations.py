@@ -115,3 +115,4 @@ if f.endswith("ool."):
     print("String ends with 'ool.' Good!")
 
 print("Split the words of the string: %s" % f.split(" "))
+
