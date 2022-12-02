@@ -44,3 +44,22 @@ if x_list.count(x) == 10 and y_list.count(y) == 10:
     print("Almost there...")
 if big_list.count(x) == 10 and big_list.count(y) == 10:
     print("Great!")
+
+print("Task 2!")
+
+g = object()
+o = object()
+
+g_list = [g] * 30
+o_list = [o] * 15
+go_list = g_list + o_list
+
+print("g_list contains %d objects." % len(g_list))
+print("o_list contains %d objects." % len(o_list))
+print("go_list contains %d objects." % len(go_list))
+
+if g_list.count(g) == 30 and o_list.count(o) == 15:
+    print("Perfect!")
+if go_list.count(g) == 30 and go_list.count(o) == 15:
+    print("Nice!")
+
