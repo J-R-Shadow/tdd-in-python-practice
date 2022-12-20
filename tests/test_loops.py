@@ -81,3 +81,15 @@ for number in numbers:
         continue
 
     print(number)
+
+print("Task 2!")
+
+for number in numbers:
+    if number == 609:
+        break
+
+    if number %2 == 0:
+        continue
+
+    print(number)
+
