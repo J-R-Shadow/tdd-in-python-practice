@@ -158,3 +158,230 @@ myfunc()
 
 print("Python is " + x)
 
+"""
+Built in data types:
+    Text type: str
+    Numeric Types: int, float, complex
+    Sequence Types: list, tuple, range
+    Mapping Type: dict
+    Set Types: set, frozenset
+    Boolean Type: bool
+    Binary Types: bytes, bytearray, memoryview
+    None Type: NoneType
+"""
+x = 5
+print(type(x)) # Prints data type of x.
+
+# setting the data type.
+x = "Hello World" # str
+print(type(x)) 
+
+x = 20 # int
+print(type(x)) 
+
+x = 20.5 # float
+print(type(x)) 
+
+x = 1j # complex
+print(type(x)) 
+
+x = ["apple", "banana", "cherry"] # list
+print(type(x)) 
+
+x = ("apple", "banana", "cherry") # tuple
+print(type(x)) 
+
+x = range(6) # range
+print(type(x)) 
+
+x = {"name" : "John", "age" : 36} # dict
+print(type(x)) 
+
+x = {"apple", "banana", "cherry"} # set
+print(type(x)) 
+
+x = frozenset({"apple", "banana", "cherry"}) # frozenset
+print(type(x))
+
+x = True # bool
+print(type(x))
+
+x = b"Hello" # bytes
+print(type(x)) 
+
+x = bytearray(5) # bytearray
+print(type(x)) 
+
+x = memoryview(bytes(5)) # memoryview
+print(type(x))
+
+x = None # NoneType
+print(type(x))
+
+# setting the specific data type.
+"""    
+    x = str("Hello World")
+    x = int(20)
+    x = float(20.5)
+    x = complex(1j)
+    x = list(("apple", "banana", "cherry"))
+    x = tuple(("apple", "banana", "cherry"))
+    x = range(6)
+    x = dict(name="John", age=36)
+    x = set(("apple", "banana", "cherry"))
+    x = frozenset(("apple", "banana", "cherry"))
+    x = bool(5)
+    x = bytes(5)
+    x = bytearray(5)
+    x = memoryview(bytes(5))
+"""
+
+# Python Numbers
+    # int
+    # float
+    # complex
+x = 1 # int
+y = 2.8 # float
+z = 1j # complex
+
+# to verify number data type.
+print(type(x))
+print(type(y))
+print(type(z))
+
+# int - integer is a whole number, positive or negative without decimals of unlimited length.
+x = 1
+y = 35656222554887711
+z = -3255522
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+# float - floating point number is a number, positive or negative, containing one or more decimals.
+x = 1.10
+y = 1.0
+z = -35.59
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+# float can also be scientific numbers with "e" to indicate power of 10.
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+# Complex numbers are written with a "j" as the imaginary part:
+x = 3+5j
+y = 5j
+z = -5j
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+# Converting types
+x = 1 # int
+y = 2.8 # float
+z = 1j # complex
+
+# Convert from int to float:
+a = float(x)
+
+# Convert from float to int:
+b = int(y)
+
+# Convert from int to complex:
+c = complex(x)
+
+print(type(a))
+print(type(b))
+print(type(c))
+# Cannot convert complex numbers into another number type.
+print(a)
+print(b)
+print(c)
+
+# Random numbers.
+import random # Python does not have a random() function. 
+
+print(random.randrange(1, 10))
+
+# Python Casting
+"""
+Specify a Variable Type
+    -int() - constructs an integer number from an integer literal, a float literal (by removing all decimals),
+      or a string literal (providing the string represents a whole number)
+    -float() - constructs a float number from an integer literal, a float literal or a string literal (providing
+      the string represents a float or an integer)
+    -str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+"""
+# Examples!
+# Integers:
+x = int(1) # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+# Floats:
+x = float(1) # x will be 1.o
+y = float(2.8) # y will be 2.8
+z = float("3") # z will be 3.0
+w = float("4.2") #w will be 4.2
+
+# Strings:
+x = str("s1") # x will be 's1'
+y = str(2) # y will be '2'
+z = str(3.0) # z will be '3.0
+
+# Python Strings
+print("Hello")
+print('Hello') # Both " " and '' are used for strings.
+
+a = "Hello" # Assigning a string to a variable.
+print(a)
+
+# Multiline Strings
+a = """Lorem ipsu, dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a) # can also be done with '''_'''
+# Line breaks are inserted in the result where they appear in the code.
+
+# Strings are Arrays
+    # strings in Python are arrays of bytes representing unicode characters.
+    # Python does not have a character data type, a single character is simply a string with a length of 1.
+    # Square brackets can be used to access elements of the string.
+
+a = "Hello, world!"
+print(a[1]) # will print 'e' as character postition starts at 0
+
+# Looping Through a String
+for x in "banana":
+    print(x) # Prints out each letter of the string seperately.
+
+# String Length
+a = "Hello, World!"
+print(len(a)) # Prints 13
+
+# Check String
+txt = "The best things in life are free!"
+print("free" in txt) # Checks if 'free' is in the text.
+
+txt = "The best things in life are free!"
+if "free" in txt:
+    print("Yes, 'free' is present.") #prints only if 'free' is in text.
+
+# Can check if a phrase or character is not present in a string.
+txt = "The best things in life are free!"
+print("expensive" not in txt)
+
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+    print("No, 'expensive' is NOT present.")
+
