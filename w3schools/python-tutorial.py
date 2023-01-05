@@ -385,3 +385,144 @@ txt = "The best things in life are free!"
 if "expensive" not in txt:
     print("No, 'expensive' is NOT present.")
 
+# Python Slicing Strings
+b = "Hello, World!"
+print(b[2:5]) # to return a range of chracters, specify start & end index, seperate with ':'
+#above will print from the first 'l' at character 2 and end at the 5th character of the string.
+
+b = "Hello, World!"
+print(b[:5]) # Character from the start of the string to postion of 5, (5th postion won't be included in print result.) print : Hello
+
+b = "Hello, World!"
+print(b[2:]) # Prints from 2nd character to end of string. print: 'llo, World!'
+
+b = "Hello, World!"
+print(b[-5:-2]) # print : 'orl', this is negative indecing. counting back characters from the end rather than the beginning of string.
+
+# Python Modify Strings
+a = "Hello, World!"
+print(a.upper()) # Uppercase, prints : 'HELLO, WORLD!'
+
+print(a.lower()) # Lowercase, prints : 'hello, world!'
+
+# Remove Whitespace
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+# Replace string
+a = "Hello, World!"
+print(a.replace("H", "J")) # prints message with H replaced by J.
+
+# Split string
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', 'World!']
+
+# Python String Concatentation
+a = "Hello"
+b = "World"
+c = a + b
+print(c) # prints 'HelloWorld'
+
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c) # prints 'Hello World'
+
+# Python Format Strings
+"""
+cannot combine strings and numbers like this.
+age = 36
+txt = "My name is John, I am" + age
+print(txt)
+"""
+# We can using the format() method. this method takes the passed argiments, formats them, places them in the string
+    # where the place holders {} are:
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+# The format() method takes unlimited number of arguments, placing them into the respective place holders.
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+# you can use index numbers {0} to be sure the arguments are placed in the correct place holders
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+
+# Escape Characters
+"""
+    To insert characters that are illegal in a string, use an escape character.
+    An escape character is a backslash \ followed by the character you want to insert.
+    An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
+    txt = "We are the so-called "Vikings" from the north."
+    the example will give an error.
+"""
+
+txt = "We are the do-called \"Vikings\" from the north."
+print(txt) # \ allows illegal characters to be used.
+# Other escape characters:
+   # \'	Single Quote	
+   # \\	Backslash	
+   # \n	New Line	
+   # \r	Carriage Return	
+   # \t	Tab	
+   # \b	Backspace	
+   # \f	Form Feed	
+   # \ooo	Octal value	
+   # \xhh	Hex value
+
+# String Methods
+"""
+Method & Description
+    capitalize()	Converts the first character to upper case
+    casefold()	Converts string into lower case
+    center()	Returns a centered string
+    count()	Returns the number of times a specified value occurs in a string
+    encode()	Returns an encoded version of the string
+    endswith()	Returns true if the string ends with the specified value
+    expandtabs()	Sets the tab size of the string
+    find()	Searches the string for a specified value and returns the position of where it was found
+    format()	Formats specified values in a string
+    format_map()	Formats specified values in a string
+    index()	Searches the string for a specified value and returns the position of where it was found
+    isalnum()	Returns True if all characters in the string are alphanumeric
+    isalpha()	Returns True if all characters in the string are in the alphabet
+    isdecimal()	Returns True if all characters in the string are decimals
+    isdigit()	Returns True if all characters in the string are digits
+    isidentifier()	Returns True if the string is an identifier
+    islower()	Returns True if all characters in the string are lower case
+    isnumeric()	Returns True if all characters in the string are numeric
+    isprintable()	Returns True if all characters in the string are printable
+    isspace()	Returns True if all characters in the string are whitespaces
+    istitle()	Returns True if the string follows the rules of a title
+    isupper()	Returns True if all characters in the string are upper case
+    join()	Joins the elements of an iterable to the end of the string
+    ljust()	Returns a left justified version of the string
+    lower()	Converts a string into lower case
+    lstrip()	Returns a left trim version of the string
+    maketrans()	Returns a translation table to be used in translations
+    partition()	Returns a tuple where the string is parted into three parts
+    replace()	Returns a string where a specified value is replaced with a specified value
+    rfind()	Searches the string for a specified value and returns the last position of where it was found
+    rindex()	Searches the string for a specified value and returns the last position of where it was found
+    rjust()	Returns a right justified version of the string
+    rpartition()	Returns a tuple where the string is parted into three parts
+    rsplit()	Splits the string at the specified separator, and returns a list
+    rstrip()	Returns a right trim version of the string
+    split()	Splits the string at the specified separator, and returns a list
+    splitlines()	Splits the string at line breaks and returns a list
+    startswith()	Returns true if the string starts with the specified value
+    strip()	Returns a trimmed version of the string
+    swapcase()	Swaps cases, lower case becomes upper case and vice versa
+    title()	Converts the first character of each word to upper case
+    translate()	Returns a translated string
+    upper()	Converts a string into upper case
+    zfill()	Fills the string with a specified number of 0 values at the beginning
+"""
+
