@@ -949,3 +949,148 @@ thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.reverse()
 print(thislist)
 
+# Copy Lists
+
+# copy() function
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+# Join Lists
+"""
+Join Two Lists
+there are several ways to join, or concatenate, two or more lists in python.
+one of the easiest ways is the + operator.
+"""
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+
+# another way is by appending all of list4 and list5.
+list4 = ["d", "f", "g"]
+list5 = [4, 5, 6]
+
+for x in list5 :
+    list4.append(x)
+
+print(list4)
+
+# Extending lists by the extend() method.
+list6 = ["h", "i", "j"]
+list7 = [7, 8, 9]
+list6.extend(list7)
+print(list6)
+
+# List Methods
+"""
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+"""
+
+# Python Tuples
+mytuple = ("apple", "banana", "cherry")
+
+# Tuple
+    # Tuples are used to store multiple items in a single variable.
+    # Tuple is one of 4 built in data types in Python.
+    # A Tuple is a colletion which is ordered and unchangeable.
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+
+# Tuple Items
+    # Tuple Items are ordered, unchangeable, and allow suplicate values.
+    # Tuple Items are indexed, the first item has index of [0] etc.
+
+# Ordered
+    # when we say that tuples are ordered, it means that the items have a defined order and that order will not change.
+
+# Unchangeable
+    # Tuples are unchangeable, meaning that we cannot change, add or remove items aftr the tuple has been created.
+
+# Allow Duplicates
+    # Since tuples are indexed, they can have items with the same value:
+        # Example:
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
+
+# Tuple Length
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+
+# Create Tuple with One Item
+thistuple = ("apple",)
+print(type(thistuple))
+
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+
+# Tuple Items - Data Types
+    # Tuple items can be of any data type:
+tuple1 = ("apple", "banana", "cherry") # String
+tuple2 = (1, 5, 7, 9, 3) # integer
+tuple3 = (True, False, False) # Boolean
+
+    # Tuple can contain different data types:
+tuple4 = ("abc", 34, True, 40, "male")
+
+# type()
+    # From Python's perspective, tuples are defined as objects with the data type 'tuple':
+    # <class 'tuple'> 
+mytuple = ("apple", "banana", "cherry")
+print(type(mytuple))
+
+# The tuple() Constructor
+    # It is also possible to use the tuple() constructor to make a tuple.
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round brackets.
+print(thistuple)
+
+# Python Collections (Arrays)
+"""
+There are four collection data types in the Python programming language:
+
+    List is a collection which is ordered and changeable. Allows duplicate members.
+    Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+    Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+    Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+*Set items are unchangeable, but you can remove and/or add items whenever you like.
+
+**As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
+
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type
+ for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
+"""
+
+# Python - Access Tuple Items
+    # Access Tuple Items
+    # You can access tuple items by referring to the index number, inside square brackets []:
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+
+# Negative Indexing
+    # Negative indexing means start from the end.
+    thistuple = ("apple", "banana", "cherry")
+    print(thistuple[-1])
+
+# Range of Indexes
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+
+print(thistuple[-4:-1]) # Range of Negative indexes.
+
+if "apple" in thistuple:
+    print("Yes, 'apple' is in fruits tuple.") # check if item exists.
+
