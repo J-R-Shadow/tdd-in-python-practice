@@ -1082,8 +1082,8 @@ print(thistuple[1])
 
 # Negative Indexing
     # Negative indexing means start from the end.
-    thistuple = ("apple", "banana", "cherry")
-    print(thistuple[-1])
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[-1])
 
 # Range of Indexes
 thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
