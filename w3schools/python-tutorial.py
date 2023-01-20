@@ -1,4 +1,4 @@
-# w3school.com/Python
+# w3school.com/Python Up to end of Tuples {Part 1}
 
 print("Hello, world!")
 #print("Cheers, mate!")
@@ -1094,3 +1094,71 @@ print(thistuple[-4:-1]) # Range of Negative indexes.
 if "apple" in thistuple:
     print("Yes, 'apple' is in fruits tuple.") # check if item exists.
 
+# Update Tuples
+    # Tuples are unchangeable, but there are some work arounds.
+# Change Tuple Values
+    # you can convert a tuple to a list, edit list, turn it back into tuple.
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+# Add items
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+# Add tuple to tuple
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
+
+# Remove items
+thistuple =("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("banana")
+thistuple = tuple(y)
+
+# Or delete tuple completely
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+# print(thistuple) will result in error because tuple no longer exists.
+
+# Unpack Tuples
+    # Unpacking a Tuple
+fruits = ("apple", "banana", "cherry") # this is packing a tuple
+
+# But we are also allowed to extract the values back into variables. this is called 'unpacking':
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+# Using Asterisk*
+    # If the number of variables is less than the number of values, you can add an * to the variable name and the values
+    #  will be assigned to the variable as a list:
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+# If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number
+#  of values left matches the number of variables left.
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
+# Loop Tuples
