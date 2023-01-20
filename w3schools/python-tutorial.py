@@ -458,7 +458,7 @@ print(myorder.format(quantity, itemno, price))
 # Escape Characters
 """
     To insert characters that are illegal in a string, use an escape character.
-    An escape character is a backslash \ followed by the character you want to insert.
+    An escape character is a backslash "\" followed by the character you want to insert.
     An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
     txt = "We are the so-called "Vikings" from the north."
     the example will give an error.
@@ -1162,3 +1162,39 @@ print(tropic)
 print(red)
 
 # Loop Tuples
+
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+    print(x) # This loops through the tuple.
+
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+    print(thistuple[i]) # loops through using index
+
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+    print(thistuple[i])
+    i = i + 1 # loops going through index till i becomes more than length of tuple
+
+# Join Tuples
+    # Use + operator to join 2 or more Tuples
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+    # Multiply tuple using * 
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple) # prints fruits two times
+
+# Tuple methods
+"""
+Python has two built-in methods that you can use on tuples.
+    -count()	Returns the number of times a specified value occurs in a tuple
+    -index()	Searches the tuple for a specified value and returns the position of where it was found
+"""
+
